@@ -1,0 +1,19 @@
+package executor;
+
+import java.util.stream.IntStream;
+
+class MyTask implements Runnable{
+
+	@Override
+	public void run() {
+		IntStream.of(1,2,3,4,5).forEach(e->System.out.println(e));
+		
+	}
+	
+}
+
+
+
+public class MyClass1 {
+
+}
