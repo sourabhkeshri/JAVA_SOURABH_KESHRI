@@ -1,0 +1,30 @@
+package deadlock;
+
+class Writer1 extends Thread{
+	Object book;
+	Object pen;
+	
+	public Writer1(Object book, Object pen) {
+		this.book = book;
+		this.pen = pen;
+	}
+	
+	
+	public void run() {
+		synchronized(book){
+			synchronized(pen) {
+				System.out.println("Writer1 is writting..");
+			}
+		}
+	}
+}
+
+
+
+public class DeadLockDemo {
+
+	public static void main(String[] args) {
+
+	}
+
+}
